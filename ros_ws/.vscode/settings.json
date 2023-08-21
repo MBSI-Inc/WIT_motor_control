@@ -1,0 +1,15 @@
+{
+    "ros.distro": "iron",
+    "python.autoComplete.extraPaths": [
+        "/home/xl/Documents/WIT_motor_control/ros_ws/install/py_pubsub/lib/python3.10/site-packages",
+        "/opt/ros/iron/lib/python3.10/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/xl/Documents/WIT_motor_control/ros_ws/install/py_pubsub/lib/python3.10/site-packages",
+        "/opt/ros/iron/lib/python3.10/site-packages"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "python.formatting.provider": "none"
+}
