@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="motor_control_package" executable="decision_node" name="decision_node"/>
+    <node pkg="motor_control_package" executable="motor_cmd_subscriber" name="motor_cmd_subscriber"/>
+</launch>
