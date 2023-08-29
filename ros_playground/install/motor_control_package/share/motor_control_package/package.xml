@@ -17,5 +17,8 @@
 
   <export>
     <build_type>ament_python</build_type>
+    <pip>
+      <depend>pyserial</depend>
+    </pip>
   </export>
 </package>

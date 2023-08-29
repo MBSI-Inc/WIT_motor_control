@@ -2,6 +2,8 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32MultiArray
 
+from gazebaes_package.test import HelloWorld
+
 class GazePublisher(Node):
 
     def __init__(self):
@@ -15,7 +17,8 @@ class GazePublisher(Node):
     def timer_callback(self):
         # For gaze_tracking
         msg = Float32MultiArray()
-        msg.data = [5.67, 8.90]  # Replace with desired float values for gaze_tracking
+        result = HelloWorld.print_hello_world()
+        msg.data = [result[0], result[1]]  # Replace with desired float values for gaze_tracking
 
         self.publisher.publish(msg)
 

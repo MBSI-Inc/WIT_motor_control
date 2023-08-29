@@ -1,4 +1,13 @@
-folder structure:
+## Dependencies
+
+This package requires the following Python dependencies:
+
+- pyserial: Install using `pip3 install pyserial`.
+
+
+
+
+## folder structure:
 .
 ├── bci_package
 ├── gazebaes_package
@@ -22,7 +31,7 @@ motor_control_package:
         listens to motor_cmd topic. Upon receiving new message, translate to motor cmd and send through serial port
 
 
-- How to run each package:
+## How to run each package:
 Open a new terminal, nagivate to project root dir, run the following script:
     colcon build 
     source install/setup.bash
