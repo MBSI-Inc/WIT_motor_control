@@ -2,7 +2,7 @@
 
 This package requires the following Python dependencies:
 
-- pyserial: Install using `pip3 install pyserial`.
+- subprocess
 
 
 
