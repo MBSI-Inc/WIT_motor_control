@@ -2,7 +2,7 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32MultiArray
 
-from gazebaes_package.test import HelloWorld
+from gazebaes_package.GazeCursor import GazeCursor
 
 class GazePublisher(Node):
 
@@ -14,11 +14,16 @@ class GazePublisher(Node):
 
         self.timer = self.create_timer(0.5, self.timer_callback)
         
+        # Create Gaze objects
+        self.gaze_obj = GazeCursor()
+        
     def timer_callback(self):
         # For gaze_tracking
         msg = Float32MultiArray()
-        result = HelloWorld.print_hello_world()
-        msg.data = [result[0], result[1]]  # Replace with desired float values for gaze_tracking
+
+        # get turning rate and speed from Gaze
+        turn_rate, speed = self.gaze_obj.loop()
+        msg.data = [turn_rate, speed]
 
         self.publisher.publish(msg)
 
